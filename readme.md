@@ -11,7 +11,7 @@ With a Visual Studio template for grpc.projects
 	- Add the comtract in client project
 	- Copy the "Grpc.Server" path "Protos\*.photo" to client
 	- In .proto file configure the property "GRPC Stub Classes" to "Client Only"
-	- ![aaa](Images/Annotation 2019-12-29 160927.png)
+	- ![aaa](./Images/Annotation 2019-12-29 160927.png)
 	- In look the project property ( in Client Project )
 	- Image "Annotation 2019-12-29 160927-3.png"
 	- Programmer the client
@@ -26,3 +26,8 @@ When you create a new .proto file, you need configure the property, as with a im
 [Annotation 2019-12-29 160927-6.png]
 Create a new "*Service" file
 Add the new service in Startup file
+
+
+For more informations check the video below:
+<br>
+![Video](youtube.com/watch?v=QyxCX2GYHxk)
