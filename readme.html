@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Create a server project</title>
+</head>
+<body>
+
+    <h3 id="create-a-server-project">Create a server project</h3>
+<p>With a Visual Studio template for grpc.projects</p>
+<ul>
+<li>Create a new project</li>
+<li>Create a new console app
+<ul>
+<li>Add a 3 packages
+<ul>
+<li>Google.Protobuf</li>
+<li>Grpc.Net.Client</li>
+<li>Grpc.Tools</li>
+</ul>
+</li>
+<li>Add the comtract in client project</li>
+<li>Copy the &quot;Grpc.Server&quot; path &quot;Protos*.photo&quot; to client</li>
+<li>In .proto file configure the property &quot;GRPC Stub Classes&quot; to &quot;Client Only&quot;</li>
+<li>![aaa](Images/Annotation 2019-12-29 160927.png)</li>
+<li>In look the project property ( in Client Project )</li>
+<li>Image &quot;Annotation 2019-12-29 160927-3.png&quot;</li>
+<li>Programmer the client</li>
+<li>In the soluction change the &quot;start up application&quot; to start the both project
+<ul>
+<li>When configure the server as the first and the client is the second, follow image
+[Annotation 2019-12-29 160927-4.png]</li>
+</ul>
+</li>
+<li>Start application, and the result is:
+[Annotation 2019-12-29 160927-5.png]</li>
+</ul>
+</li>
+</ul>
+<h3 id="when-create-a-new-service">When create a new Service</h3>
+<p>When you create a new .proto file, you need configure the property, as with a image bellow
+[Annotation 2019-12-29 160927-6.png]
+Create a new &quot;*Service&quot; file
+Add the new service in Startup file</p>
+
+
+</body>
+</html>
