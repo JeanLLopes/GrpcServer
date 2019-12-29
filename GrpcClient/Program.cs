@@ -1,4 +1,5 @@
-﻿using Grpc.Net.Client;
+﻿using Grpc.Core;
+using Grpc.Net.Client;
 using GrpcServer;
 using System;
 using System.Threading.Tasks;
@@ -32,6 +33,17 @@ namespace GrpcClient
             Console.WriteLine(customerResponse.LastName);
             Console.WriteLine(customerResponse.Age);
             Console.WriteLine(customerResponse.EmailAddress);
+
+            Console.WriteLine("Get Customer with success....");
+
+            using (var call = customerClient.CreateCustomer(new CreateCustomerResponse()))
+            {
+                while (await call.ResponseStream.MoveNext())
+                {
+                    var currentCustomer = call.ResponseStream.Current;
+                    Console.WriteLine($"{currentCustomer.FirstName} {currentCustomer.LastName}");
+                }
+            }
             Console.ReadKey();
         }
     }

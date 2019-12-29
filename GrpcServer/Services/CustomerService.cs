@@ -29,15 +29,21 @@ namespace GrpcServer.Services
             return Task.FromResult(output);
         }
 
-        public override Task CreateCustomer(
+        public override async Task CreateCustomer(
             CreateCustomerResponse request, 
             IServerStreamWriter<CustomerModel> responseStream, 
             ServerCallContext context)
         {
+            List<CustomerModel> customers = new List<CustomerModel>();
+            customers.Add(DefaultCustomerModelResponse);
+            customers.Add(DefaultCustomerModelResponse);
+            customers.Add(DefaultCustomerModelResponse);
 
-
-
-            return base.CreateCustomer(request, responseStream, context);
+            foreach (var customer in customers)
+            {
+                await Task.Delay(3000);
+                await responseStream.WriteAsync(customer);
+            }
         }
 
         private static CustomerModel DefaultCustomerModelResponse =>
