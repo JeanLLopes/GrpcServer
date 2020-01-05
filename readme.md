@@ -28,6 +28,4 @@ Create a new "*Service" file
 Add the new service in Startup file
 
 
-For more informations check the video below:
-<br>
-![Video](youtube.com/watch?v=QyxCX2GYHxk)
+For more informations check this [video](youtube.com/watch?v=QyxCX2GYHxk)
